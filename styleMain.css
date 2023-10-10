@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #333, #bb02ff);
+  background-attachment: fixed;
+}
+
+.container {
+  position: relative;
+  width: 1150px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+img {
+  width: 100%;
+}
+
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  border-radius: 10px;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin: 20px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container:hover .card {
+  /*filter: blur(20px);*/
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.container .card:hover {
+  filter: blur(0);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.container .card .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  clip-path: circle(180px at center 0);
+  text-align: center;
+}
+
+.container .card .content {
+  position: absolute;
+  bottom: 10px;
+  page-break-after: 20px;
+  text-align: center !important;
+  padding: 45px;
+  padding-bottom: 10px;
+}
+
+.container .card .content p {
+  color: #666;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.container .card .content a {
+  position: relative;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 40px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.container .card:nth-child(1) .circle,
+.container .card:nth-child(1) .content a {
+  background-color: #ffaf00;
+}
+
+.container .card:nth-child(2) .circle,
+.container .card:nth-child(2) .content a {
+  background-color: #da2268;
+}
+
+.container .card:nth-child(3) .circle,
+.container .card:nth-child(3) .content a {
+  background-color: #bb02ff;
+}
+
+.btnarea {
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.top-header {
+  height: 50px;
+}
+
+/* 팝업 디자인 */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+h1,
+ul {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+hr {
+  margin: 0 30px;
+}
+
+td {
+  width: 450px;
+}
+
+h2 {
+  color: black;
+}
+
+.profile {
+  background-color: white;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 65%;
+
+  text-align: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  margin-top: -100px;
+}
+
+.text {
+  color: grey;
+  text-align: left;
+  font-size: 1.2em;
+  list-style: none;
+}
