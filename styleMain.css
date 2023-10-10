@@ -67,7 +67,7 @@ img {
   bottom: 10px;
   page-break-after: 20px;
   text-align: center !important;
-  padding: 45px;
+  padding: 35px;
   padding-bottom: 10px;
 }
 
@@ -221,4 +221,12 @@ h2 {
   text-align: left;
   font-size: 1.2em;
   list-style: none;
+}
+
+.card.note_card {
+  height: 270px;
+}
+
+.card.comment_card {
+  width: 50%;
 }
